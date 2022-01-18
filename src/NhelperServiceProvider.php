@@ -5,7 +5,7 @@ namespace Concepticio\Nhelper;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Auth;
 
-class NhelpServiceProvider extends ServiceProvider
+class NhelperServiceProvider extends ServiceProvider
 {
     /**
      * Register services.

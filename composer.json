@@ -30,10 +30,7 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "app/",
-            "Concepticio\\Nhelper\\": "src/",
-            "Database\\Factories\\": "database/factories/",
-            "Database\\Seeders\\": "database/seeders/"
+            "Concepticio\\Nhelper\\": "src/"
         }
     },
     "autoload-dev": {
@@ -50,9 +47,8 @@
     },
     "extra": {
         "laravel": {
-            "dont-discover": [],
             "providers": [
-                "Concepticio\\Nhelper\\NhelpServiceProvider"
+                "Concepticio\\Nhelper\\NhelperServiceProvider"
             ]
         }
     },

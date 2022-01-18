@@ -25,7 +25,7 @@ Route::group(['prefix' => 'nhelper'], function () {
     // Route::get('/aide/{module}/{post}', [usersViewController::class,'navAide'])->name('view.navaide');
 
     Route::get('/admin', function () {
-        return view('nhelper::dashbord.admindash',compact( Auth::user()));
+        return view('nhelper::dashbord.admindash');
     });
 
     //hel_post
