@@ -1,4 +1,4 @@
-@extends('nhelp::dashbord.admindash');
+@extends('nhelper::dashbord.admindash');
 @section('contenaire')
 <section class="content-header">
     <div class="container-fluid">
@@ -23,7 +23,7 @@
           <div class="card">
             <div class="card-header">
               <h3 class="card-title">Liste des Modules</h3>              
-              @include('nhelp::Module._modal_ajout')
+              @include('nhelper::Module._modal_ajout')
               <button type="button" class="btn btn-success fa-pull-right" data-toggle="modal" data-target="#myModal">Ajouter</button>
             </div>
             <!-- /.card-header -->
@@ -48,9 +48,9 @@
                           <a data-toggle="modal" data-toggle="tooltip"data-target="#modal_update-{{ $module->id }}" class="btn btn-warning text-white"><i class="fa fa-pencil-alt"></i></a>
                           <a data-toggle="modal" data-toggle="tooltip"data-target="#modal_confirm{{ $module->id }}" class="btn btn-danger"><i class="fa fa-trash"></i></a>
                       </td>
-                      @include('nhelp::Module._modal_show')
-                      @include('nhelp::Module._modal_update')
-                      @include('nhelp::Module._confirm')
+                      @include('nhelper::Module._modal_show')
+                      @include('nhelper::Module._modal_update')
+                      @include('nhelper::Module._confirm')
                     </tr>
                     
                   @endforeach

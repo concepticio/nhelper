@@ -1,9 +1,9 @@
 <?php
 
-namespace Concepticio\Nhelp\Controllers;
+namespace Concepticio\Nhelper\Controllers;
 
-use Concepticio\Nhelp\Models\help_module;
-use Concepticio\Nhelp\Models\help_post;
+use Concepticio\Nhelper\Models\help_module;
+use Concepticio\Nhelper\Models\help_post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
@@ -49,7 +49,7 @@ class usersViewController extends Controller
         }   
        
         if ($lists != null){
-            return view('nhelp::usersviews.showone')->with(
+            return view('nhelper::usersviews.showone')->with(
             
                     [
                         'module'=>$module,
@@ -69,7 +69,7 @@ class usersViewController extends Controller
     public function index()
     {        
             $modules = help_module::all();
-            return view('nhelp::usersviews.index')->with(['modules'=>$modules]);       
+            return view('nhelper::usersviews.index')->with(['modules'=>$modules]);       
     }
         
     public function show($id)
@@ -95,7 +95,7 @@ class usersViewController extends Controller
         $posts =help_post::all();
         $modules =help_module::all();
         $module = help_module::find($id);
-        return view('nhelp::usersviews.show')->with(
+        return view('nhelper::usersviews.show')->with(
             [
                 'module'=>$module,
                 'lists'=>$lists,

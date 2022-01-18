@@ -1,11 +1,11 @@
 <?php
 
-namespace Concepticio\Nhelp\Controllers;
+namespace Concepticio\Nhelper\Controllers;
 
-use Concepticio\Nhelp\Models\help_module;
-use Concepticio\Nhelp\Models\help_post;
-use Concepticio\Nhelp\Models\Module;
-use Concepticio\Nhelp\Models\Post;
+use Concepticio\Nhelper\Models\help_module;
+use Concepticio\Nhelper\Models\help_post;
+use Concepticio\Nhelper\Models\Module;
+use Concepticio\Nhelper\Models\Post;
 use Illuminate\Http\Request;
 use PhpParser\Node\Stmt\TryCatch;
 use App\Http\Controllers\Controller;
@@ -23,7 +23,7 @@ class help_postController extends Controller
         $help_posts = help_post::simplepaginate(4);
         $help_modules = help_module::all();
     
-        return view('nhelp::Post.index')->with(
+        return view('nhelper::Post.index')->with(
             [
               'help_posts' => $help_posts,
               'help_modules'=> $help_modules

@@ -1,6 +1,6 @@
 <?php
 
-namespace Concepticio\Nhelp\Exceptions;
+namespace Concepticio\Nhelper\Exceptions;
 
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Throwable;

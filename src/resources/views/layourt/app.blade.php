@@ -15,14 +15,14 @@
         <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
 
         <!-- FontAwesome JS-->
-        <script defer src="{{asset('vendor/nhelp/assets/fontawesome/js/all.min.js')}}"></script>
+        <script defer src="{{asset('vendor/nhelper/assets/fontawesome/js/all.min.js')}}"></script>
 
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
-        <link rel="stylesheet" href="{{asset('vendor/nhelp/assets/plugins/simplelightbox/simple-lightbox.min.css')}}">
+        <link rel="stylesheet" href="{{asset('vendor/nhelper/assets/plugins/simplelightbox/simple-lightbox.min.css')}}">
 
 
         <!-- Theme CSS -->
-        <link id="theme-style" rel="stylesheet" href="{{asset('vendor/nhelp/assets/css/theme.css')}}">
+        <link id="theme-style" rel="stylesheet" href="{{asset('vendor/nhelper/assets/css/theme.css')}}">
         <style>  p{ line-height: 20px; } </style>
     </head>
     <body>
@@ -36,7 +36,7 @@
                             <span></span>
                             <span></span>
                         </button>
-                        <div class="site-logo"><a class="navbar-brand" href="{{ route('nhelp.index') }}"><img class="logo-icon me-2" src="{{ asset(config('nhelp.logo_path','vendor/nhelp/assets/images/coderdocs-logo.png')) }}" width=50 height=45 ="logo"></a></div>
+                        <div class="site-logo"><a class="navbar-brand" href="{{ route('nhelper.index') }}"><img class="logo-icon me-2" src="{{ asset(config('nhelper.logo_path','vendor/nhelper/assets/images/coderdocs-logo.png')) }}" width=50 height=45 ="logo"></a></div>
                     </div><!--//docs-logo-wrapper-->
                 </div><!--//container-->
             </div><!--//branding-->
@@ -59,15 +59,15 @@
     </div>
 
 
-        <script src="{{asset('vendor/nhelp/assets/plugins/popper.min.js')}}"></script>
-        <script src="{{asset('vendor/nhelp/assets/plugins/bootstrap/js/bootstrap.min.js')}}"></script>
+        <script src="{{asset('vendor/nhelper/assets/plugins/popper.min.js')}}"></script>
+        <script src="{{asset('vendor/nhelper/assets/plugins/bootstrap/js/bootstrap.min.js')}}"></script>
 
          <!-- Page Specific JS -->
-        <script src="{{asset('vendor/nhelp/assets/plugins/smoothscroll.min.js')}}"></script>
+        <script src="{{asset('vendor/nhelper/assets/plugins/smoothscroll.min.js')}}"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
-        <script src="{{asset('vendor/nhelp/assets/js/highlight-custom.js')}}"></script>
-        <script src="{{asset('vendor/nhelp/assets/plugins/simplelightbox/simple-lightbox.min.js')}}"></script>
-        <script src="{{asset('vendor/nhelp/assets/plugins/gumshoe/gumshoe.polyfills.min.js')}}"></script>
-        <script src="{{asset('vendor/nhelp/assets/js/docs.js')}}"></script>
+        <script src="{{asset('vendor/nhelper/assets/js/highlight-custom.js')}}"></script>
+        <script src="{{asset('vendor/nhelper/assets/plugins/simplelightbox/simple-lightbox.min.js')}}"></script>
+        <script src="{{asset('vendor/nhelper/assets/plugins/gumshoe/gumshoe.polyfills.min.js')}}"></script>
+        <script src="{{asset('vendor/nhelper/assets/js/docs.js')}}"></script>
     </body>
 </html>

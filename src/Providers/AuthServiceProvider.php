@@ -1,6 +1,6 @@
 <?php
 
-namespace Concepticio\Nhelp\Providers;
+namespace Concepticio\Nhelper\Providers;
 
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Gate;
@@ -13,7 +13,7 @@ class AuthServiceProvider extends ServiceProvider
      * @var array<class-string, class-string>
      */
     protected $policies = [
-        // 'Concepticio\Nhelp\Models\Model' => 'Concepticio\Nhelp\Policies\ModelPolicy',
+        // 'Concepticio\Nhelper\Models\Model' => 'Concepticio\Nhelper\Policies\ModelPolicy',
     ];
 
     /**

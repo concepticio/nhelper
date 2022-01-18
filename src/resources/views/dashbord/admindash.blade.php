@@ -8,30 +8,30 @@
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="{{asset('/vendor/nhelp/plugins/fontawesome-free/css/all.min.css')}}">
+  <link rel="stylesheet" href="{{asset('/vendor/nhelper/plugins/fontawesome-free/css/all.min.css')}}">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Tempusdominus Bootstrap 4 -->
-  <link rel="stylesheet" href="{{asset('/vendor/nhelp/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css')}}">
+  <link rel="stylesheet" href="{{asset('/vendor/nhelper/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css')}}">
   <!-- iCheck -->
-  <link rel="stylesheet" href="{{asset('/vendor/nhelp/plugins/icheck-bootstrap/icheck-bootstrap.min.css')}}">
+  <link rel="stylesheet" href="{{asset('/vendor/nhelper/plugins/icheck-bootstrap/icheck-bootstrap.min.css')}}">
   <!-- JQVMap -->
-  <link rel="stylesheet" href="{{asset('/vendor/nhelp/plugins/jqvmap/jqvmap.min.css')}}">
+  <link rel="stylesheet" href="{{asset('/vendor/nhelper/plugins/jqvmap/jqvmap.min.css')}}">
   <!-- Theme style -->
-  <link rel="stylesheet" href="{{asset('/vendor/nhelp/dist/css/adminlte.min.css')}}">
+  <link rel="stylesheet" href="{{asset('/vendor/nhelper/dist/css/adminlte.min.css')}}">
   <!-- overlayScrollbars -->
-  <link rel="stylesheet" href="{{asset('/vendor/nhelp/plugins/overlayScrollbars/css/OverlayScrollbars.min.css')}}">
+  <link rel="stylesheet" href="{{asset('/vendor/nhelper/plugins/overlayScrollbars/css/OverlayScrollbars.min.css')}}">
   <!-- Daterange picker -->
-  <link rel="stylesheet" href="{{asset('/vendor/nhelp/plugins/daterangepicker/daterangepicker.css')}}">
+  <link rel="stylesheet" href="{{asset('/vendor/nhelper/plugins/daterangepicker/daterangepicker.css')}}">
   <!-- summernote -->
-  <link rel="stylesheet" href="{{asset('/vendor/nhelp/plugins/summernote/summernote-bs4.min.css')}}">
+  <link rel="stylesheet" href="{{asset('/vendor/nhelper/plugins/summernote/summernote-bs4.min.css')}}">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
 
   <!-- Preloader -->
   <div class="preloader flex-column justify-content-center align-items-center">
-    <img class="animation__shake" src="{{ asset(config('nhelp.logo_path'))}}" ALT="{{env('APP_NAME')}}" height="80" width="100">
+    <img class="animation__shake" src="{{ asset(config('nhelper.logo_path'))}}" ALT="{{env('APP_NAME')}}" height="80" width="100">
   </div>
  
   <!-- Navbar -->
@@ -42,7 +42,7 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="{{route('nhelp.index')}}" class="nav-link">Accueil</a>
+        <a href="{{route('nhelper.index')}}" class="nav-link">Accueil</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Contact</a>
@@ -92,8 +92,8 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color: #0f3f5d" >
     <!-- Brand Logo -->
-    <a href="{{route('nhelp.index')}}" class="brand-link"> 
-      <img src="{{ asset(config('nhelp.logo_path'))}}" alt="LOGO" class="brand-image img-circle elevation-3">
+    <a href="{{route('nhelper.index')}}" class="brand-link"> 
+      <img src="{{ asset(config('nhelper.logo_path'))}}" alt="LOGO" class="brand-image img-circle elevation-3">
       <span class="brand-text font-weight-light">{{env('APP_NAME')}}</span>
     </a>
 
@@ -102,7 +102,7 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="{{asset('vendor/nhelp/dist/img/user2-160x160.jpg')}}" class="img-circle elevation-2" alt="User Image">
+          <img src="{{asset('vendor/nhelper/dist/img/user2-160x160.jpg')}}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
           <a href="#" class="d-block">{{''}}</a>
@@ -139,7 +139,7 @@
   </aside>
 
   <div class="content-wrapper">
-    @include('nhelp::dashbord.flash-message')
+    @include('nhelper::dashbord.flash-message')
   
     @yield('contenaire')
 
@@ -155,39 +155,39 @@
 </div>
 
 <!-- jQuery -->
-<script src="{{asset('/vendor/nhelp/plugins/jquery/jquery.min.js')}}"></script>
+<script src="{{asset('/vendor/nhelper/plugins/jquery/jquery.min.js')}}"></script>
 <!-- jQuery UI 1.11.4 -->
-<script src="{{asset('/vendor/nhelp/plugins/jquery-ui/jquery-ui.min.js')}}"></script>
+<script src="{{asset('/vendor/nhelper/plugins/jquery-ui/jquery-ui.min.js')}}"></script>
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
 <script>
   $.widget.bridge('uibutton', $.ui.button)
 </script>
 @yield('script')
 <!-- Bootstrap 4 -->
-<script src="{{asset('/vendor/nhelp/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+<script src="{{asset('/vendor/nhelper/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 <!-- ChartJS -->
-<script src="{{asset('/vendor/nhelp/plugins/chart.js/Chart.min.js')}}"></script>
+<script src="{{asset('/vendor/nhelper/plugins/chart.js/Chart.min.js')}}"></script>
 <!-- Sparkline -->
-<script src="{{asset('/vendor/nhelp/plugins/sparklines/sparkline.js')}}"></script>
+<script src="{{asset('/vendor/nhelper/plugins/sparklines/sparkline.js')}}"></script>
 <!-- JQVMap -->
-<script src="{{asset('/vendor/nhelp/plugins/jqvmap/jquery.vmap.min.js')}}"></script>
-<script src="{{asset('/vendor/nhelp/plugins/jqvmap/maps/jquery.vmap.usa.js')}}"></script>
+<script src="{{asset('/vendor/nhelper/plugins/jqvmap/jquery.vmap.min.js')}}"></script>
+<script src="{{asset('/vendor/nhelper/plugins/jqvmap/maps/jquery.vmap.usa.js')}}"></script>
 <!-- jQuery Knob Chart -->
-<script src="{{asset('/vendor/nhelp/plugins/jquery-knob/jquery.knob.min.js')}}"></script>
+<script src="{{asset('/vendor/nhelper/plugins/jquery-knob/jquery.knob.min.js')}}"></script>
 <!-- daterangepicker -->
-<script src="{{asset('/vendor/nhelp/plugins/moment/moment.min.js')}}"></script>
-<script src="{{asset('/vendor/nhelp/plugins/daterangepicker/daterangepicker.js')}}"></script>
+<script src="{{asset('/vendor/nhelper/plugins/moment/moment.min.js')}}"></script>
+<script src="{{asset('/vendor/nhelper/plugins/daterangepicker/daterangepicker.js')}}"></script>
 <!-- Tempusdominus Bootstrap 4 -->
-<script src="{{asset('/vendor/nhelp/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js')}}"></script>
+<script src="{{asset('/vendor/nhelper/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js')}}"></script>
 <!-- Summernote -->
-<script src="{{asset('/vendor/nhelp/plugins/summernote/summernote-bs4.min.js')}}"></script>
+<script src="{{asset('/vendor/nhelper/plugins/summernote/summernote-bs4.min.js')}}"></script>
 <!-- overlayScrollbars -->
-<script src="{{asset('/vendor/nhelp/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js')}}"></script>
+<script src="{{asset('/vendor/nhelper/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js')}}"></script>
 <!-- AdminLTE App -->
-<script src="{{asset('/vendor/nhelp/dist/js/adminlte.js')}}"></script>
+<script src="{{asset('/vendor/nhelper/dist/js/adminlte.js')}}"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="{{asset('/vendor/nhelp/dist/js/demo.js')}}"></script>
+<script src="{{asset('/vendor/nhelper/dist/js/demo.js')}}"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="{{asset('/vendor/nhelp/dist/js/pages/dashboard.js')}}"></script>
+<script src="{{asset('/vendor/nhelper/dist/js/pages/dashboard.js')}}"></script>
 </body>
 </html>

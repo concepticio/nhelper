@@ -1,6 +1,6 @@
 <?php
 
-namespace Concepticio\Nhelp\Models;
+namespace Concepticio\Nhelper\Models;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;

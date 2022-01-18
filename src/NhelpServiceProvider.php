@@ -1,6 +1,6 @@
 <?php
 
-namespace Concepticio\Nhelp;
+namespace Concepticio\Nhelper;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Auth;
@@ -14,9 +14,9 @@ class NhelpServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->make('Concepticio\Nhelp\Controllers\help_moduleController');
-        $this->loadViewsFrom(__DIR__.'/resources/views', 'nhelp');
-        $this->mergeConfigFrom(__DIR__.'/config.php', 'nhelp');
+        $this->app->make('Concepticio\Nhelper\Controllers\help_moduleController');
+        $this->loadViewsFrom(__DIR__.'/resources/views', 'nhelper');
+        $this->mergeConfigFrom(__DIR__.'/config.php', 'nhelper');
         
     }
 
@@ -32,32 +32,32 @@ class NhelpServiceProvider extends ServiceProvider
 
    
         $this->loadMigrationsFrom(__DIR__.'/database/migrations');
-        $this->loadTranslationsFrom(__DIR__.'/resources/lang', 'nhelp');
-        $this->loadViewsFrom(__DIR__.'/resources/views', 'nhelp');
+        $this->loadTranslationsFrom(__DIR__.'/resources/lang', 'nhelper');
+        $this->loadViewsFrom(__DIR__.'/resources/views', 'nhelper');
 
         //publication pour faciliter la modification par l'utilisateur
         // $this->publishes([
-        //     __DIR__.'/../config.php' => config_path('nhelp.php'),
+        //     __DIR__.'/../config.php' => config_path('nhelper.php'),
         // ]);
 
 
         $configPath = __DIR__ . '/config.php';
         if (function_exists('config_path')) {
-            $publishPath = config_path('nhelp.php');
+            $publishPath = config_path('nhelper.php');
         } else {
-            $publishPath = base_path('config/nhelp.php');
+            $publishPath = base_path('config/nhelper.php');
         }
         $this->publishes([$configPath => $publishPath], 'config');
 
 
         // $this->publishes([
-        //     __DIR__.'/../resources/lang' => resource_path('lang/vendor/nhelp'),
+        //     __DIR__.'/../resources/lang' => resource_path('lang/vendor/nhelper'),
         // ]);
         $this->publishes([
-            __DIR__.'/resources/views' => resource_path('views/vendor/nhelp'),
+            __DIR__.'/resources/views' => resource_path('views/vendor/nhelper'),
         ]);
         $this->publishes([
-            __DIR__.'/public' => public_path('vendor/nhelp'),
+            __DIR__.'/public' => public_path('vendor/nhelper'),
         ], 'public');
     }
 }

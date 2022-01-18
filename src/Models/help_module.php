@@ -1,6 +1,6 @@
 <?php
 
-namespace Concepticio\Nhelp\Models;
+namespace Concepticio\Nhelper\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;

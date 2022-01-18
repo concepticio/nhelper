@@ -1,6 +1,6 @@
 <?php
 
-namespace Concepticio\Nhelp\Providers;
+namespace Concepticio\Nhelper\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

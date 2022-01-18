@@ -1,9 +1,9 @@
 <?php
 
-namespace Concepticio\Nhelp\Controllers;
+namespace Concepticio\Nhelper\Controllers;
 
-use Concepticio\Nhelp\Models\help_module;
-use Concepticio\Nhelp\Models\help_post;
+use Concepticio\Nhelper\Models\help_module;
+use Concepticio\Nhelper\Models\help_post;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -18,7 +18,7 @@ class help_moduleController extends Controller
     {
         //
         $help_modules = help_module::simplepaginate(4);
-        return view("nhelp::Module.index")->with(['help_modules'=>$help_modules])
+        return view("nhelper::Module.index")->with(['help_modules'=>$help_modules])
                                     ->with('i',($request->input('page',1)-1) * 5);
     }
 

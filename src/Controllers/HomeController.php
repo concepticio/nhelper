@@ -1,6 +1,6 @@
 <?php
 
-namespace Concepticio\Nhelp\Controllers;
+namespace Concepticio\Nhelper\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;

@@ -1,4 +1,4 @@
-@extends('nhelp::layourt.app')
+@extends('nhelper::layourt.app')
 @section('content')
     <article class="docs-article" id="section-1">
         
@@ -16,13 +16,13 @@
     </article>
 @endsection
 @section('script')
-    <script src="{{asset('vendor/nhelp/assets/plugins/popper.min.js')}}"></script>
-    <script src="{{asset('vendor/nhelp/assets/plugins/bootstrap/js/bootstrap.min.js')}}"></script>
+    <script src="{{asset('vendor/nhelper/assets/plugins/popper.min.js')}}"></script>
+    <script src="{{asset('vendor/nhelper/assets/plugins/bootstrap/js/bootstrap.min.js')}}"></script>
     <!-- Page Specific JS -->
-    <script src="{{asset('vendor/nhelp/assets/plugins/smoothscroll.min.js')}}"></script>
+    <script src="{{asset('vendor/nhelper/assets/plugins/smoothscroll.min.js')}}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
-    <script src="{{asset('vendor/nhelp/assets/js/highlight-custom.js')}}"></script>
-    <script src="{{asset('vendor/nhelp/assets/plugins/simplelightbox/simple-lightbox.min.js')}}"></script>
-    <script src="{{asset('vendor/nhelp/assets/plugins/gumshoe/gumshoe.polyfills.min.js')}}"></script>
-    {{-- <script src="{{asset('vendor/nhelp/assets/js/docs.js')}}"></script> --}}
+    <script src="{{asset('vendor/nhelper/assets/js/highlight-custom.js')}}"></script>
+    <script src="{{asset('vendor/nhelper/assets/plugins/simplelightbox/simple-lightbox.min.js')}}"></script>
+    <script src="{{asset('vendor/nhelper/assets/plugins/gumshoe/gumshoe.polyfills.min.js')}}"></script>
+    {{-- <script src="{{asset('vendor/nhelper/assets/js/docs.js')}}"></script> --}}
 @endsection
