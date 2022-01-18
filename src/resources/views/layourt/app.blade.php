@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>NFacture</title>
+
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Bootstrap Documentation Template For Software Developers">
+        <meta name="author" content="Xiaoying Riley at 3rd Wave Media">
+        <link rel="shortcut icon" href="{{asset(config('favicon_path'))}}">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+
+        <!-- FontAwesome JS-->
+        <script defer src="{{asset('vendor/nhelp/assets/fontawesome/js/all.min.js')}}"></script>
+
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
+        <link rel="stylesheet" href="{{asset('vendor/nhelp/assets/plugins/simplelightbox/simple-lightbox.min.css')}}">
+
+
+        <!-- Theme CSS -->
+        <link id="theme-style" rel="stylesheet" href="{{asset('vendor/nhelp/assets/css/theme.css')}}">
+        <style>  p{ line-height: 20px; } </style>
+    </head>
+    <body>
+        <header class="header fixed-top">
+
+            <div class="branding docs-branding">
+                <div class="container-fluid position-relative py-2">
+                    <div class="docs-logo-wrapper">
+                        <button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible me-2 d-xl-none" type="button">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                        <div class="site-logo"><a class="navbar-brand" href="{{ route('nhelp.index') }}"><img class="logo-icon me-2" src="{{ asset(config('nhelp.logo_path','vendor/nhelp/assets/images/coderdocs-logo.png')) }}" width=50 height=45 ="logo"></a></div>
+                    </div><!--//docs-logo-wrapper-->
+                </div><!--//container-->
+            </div><!--//branding-->
+        </header><!--//header-->
+        <div class="docs-wrapper">
+            @yield('sider')
+            <div class="page-content">
+                <div class="container">
+                    @yield('contentindex')
+                </div>
+            </div>
+
+            <div class="docs-content">
+                <div class="container">
+
+                    @yield('content')            
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+        <script src="{{asset('vendor/nhelp/assets/plugins/popper.min.js')}}"></script>
+        <script src="{{asset('vendor/nhelp/assets/plugins/bootstrap/js/bootstrap.min.js')}}"></script>
+
+         <!-- Page Specific JS -->
+        <script src="{{asset('vendor/nhelp/assets/plugins/smoothscroll.min.js')}}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+        <script src="{{asset('vendor/nhelp/assets/js/highlight-custom.js')}}"></script>
+        <script src="{{asset('vendor/nhelp/assets/plugins/simplelightbox/simple-lightbox.min.js')}}"></script>
+        <script src="{{asset('vendor/nhelp/assets/plugins/gumshoe/gumshoe.polyfills.min.js')}}"></script>
+        <script src="{{asset('vendor/nhelp/assets/js/docs.js')}}"></script>
+    </body>
+</html>
