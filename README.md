@@ -3,6 +3,8 @@ Ce package permet de mettre en place rapidement un module d'aide sur son applica
 
 ## Comment installer
 
-`composer require concepticio/nhelp`
+# 1- composer require concepticio/nhelper`
 
-`Concepticio\Nhelp\NhelpServiceProvider::class,`
+# 2- php artisan vendor:publish --provider="Concepticio\Nhelper\NhelperServiceProvider" --tag=public --ansi
+
+# 3- php artisan vendor:publish  --provider="Concepticio\Nhelper\NhelperServiceProvider" --tag=config --ansi

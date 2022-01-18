@@ -3,5 +3,6 @@
 
 
 return [
-    'NHELP_LOGO_PATH'=> "/image/logo.jpg",
+    'logo_path'=> "/image/logo.jpg",
+    'favicon_path'=> "/image/logo.jpg",
 ];
