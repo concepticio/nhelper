@@ -25,13 +25,13 @@ function responsiveSidebar() {
     let w = window.innerWidth;
 	if(w >= 1200) {
 	    // if larger 
-	    // console.log('larger');
+	    console.log('larger');
 		sidebar.classList.remove('sidebar-hidden');
 		sidebar.classList.add('sidebar-visible');
 		
 	} else {
 	    // if smaller
-	    // console.log('smaller');
+	    console.log('smaller');
 	    sidebar.classList.remove('sidebar-visible');
 		sidebar.classList.add('sidebar-hidden');
 	}
@@ -39,12 +39,12 @@ function responsiveSidebar() {
 
 sidebarToggler.addEventListener('click', () => {
 	if (sidebar.classList.contains('sidebar-visible')) {
-		// console.log('visible');
+		console.log('visible');
 		sidebar.classList.remove('sidebar-visible');
 		sidebar.classList.add('sidebar-hidden');
 		
 	} else {
-		// console.log('hidden');
+		console.log('hidden');
 		sidebar.classList.remove('sidebar-hidden');
 		sidebar.classList.add('sidebar-visible');
 	}
@@ -83,15 +83,15 @@ sidebarToggler.addEventListener('click', () => {
 /* ===== Gumshoe SrollSpy ===== */
 /* Ref: https://github.com/cferdinandi/gumshoe  */
 // Initialize Gumshoe
-// var spy = new Gumshoe('#docs-nav a', {
-// 	offset: 69 //sticky header height
-// });
+var spy = new Gumshoe('#docs-nav a', {
+	offset: 69 //sticky header height
+});
 
 
 /* ====== SimpleLightbox Plugin ======= */
 /*  Ref: https://github.com/andreknieriem/simplelightbox */
 
-// var lightbox = new SimpleLightbox('.simplelightbox-gallery a', {/* options */});
+var lightbox = new SimpleLightbox('.simplelightbox-gallery a', {/* options */});
 
 
 
