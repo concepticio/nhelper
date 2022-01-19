@@ -1,6 +1,5 @@
 {
     "name": "concepticio/nhelper",
-    "type": "project",
     "description": "Module d'aide de l'application nfacture.",
     "keywords": ["framework", "laravel","aide","nhelper","module d aide"],
     "license": "MIT",
