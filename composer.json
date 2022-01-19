@@ -2,31 +2,18 @@
     "name": "concepticio/nhelper",
     "type": "project",
     "description": "Module d'aide de l'application nfacture.",
-    "keywords": ["framework", "laravel","nfacture","nhelper"],
+    "keywords": ["framework", "laravel","aide","nhelper","module d'aide"],
     "license": "MIT",
     "authors": [
         {
-            "name": "Conceptic.IO",
+            "name": "Conceptic.IO SARL",
             "email": "support@conceptic.io"
         }
     ],
     "require": {
-        "php": "^7.3|^8.0",
-        "barryvdh/laravel-debugbar": "^3.6",
-        "fruitcake/laravel-cors": "^2.0",
-        "guzzlehttp/guzzle": "^7.0.1",
-        "laravel/framework": "^8.75",
-        "laravel/sanctum": "^2.11",
-        "laravel/tinker": "^2.5"
+        "php": "^7.3|^8.0"
     },
     "require-dev": {
-        "facade/ignition": "^2.5",
-        "fakerphp/faker": "^1.9.1",
-        "laravel/sail": "^1.0.1",
-        "laravel/ui": "^3.4",
-        "mockery/mockery": "^1.4.4",
-        "nunomaduro/collision": "^5.10",
-        "phpunit/phpunit": "^9.5.10"
     },
     "autoload": {
         "psr-4": {
