@@ -36,7 +36,7 @@
                             <span></span>
                             <span></span>
                         </button>
-                        <div class="site-logo"><a class="navbar-brand" href="{{ route('nhelper.index') }}"><img class="logo-icon me-2" src="{{ asset(config('nhelper.logo_path','vendor/nhelper/assets/images/coderdocs-logo.png')) }}" width=50 height=45 ="logo"></a></div>
+                        <div class="site-logo"><a class="navbar-brand" href="{{ route('nhelper.index') }}"><img class="logo-icon me-2" src="{{ asset(config('nhelper.logo_path')) }}" width=50 height=45 ="logo"></a></div>
                     </div><!--//docs-logo-wrapper-->
                 </div><!--//container-->
             </div><!--//branding-->
@@ -52,7 +52,7 @@
             <div class="docs-content">
                 <div class="container">
 
-                    @yield('content')            
+                    @yield('content')
                 </div>
             </div>
         </div>

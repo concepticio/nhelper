@@ -3,6 +3,6 @@
 
 
 return [
-    'logo_path'=> "/image/logo.jpg",
-    'favicon_path'=> "/image/logo.jpg",
+    'logo_path'=> "/vendor/nhelper/assets/images/logo.png",
+    'favicon_path'=> "/vendor/nhelper/assets/images/logo.png",
 ];
