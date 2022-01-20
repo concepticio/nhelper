@@ -1,4 +1,4 @@
-"use strict";
+
 
 
 /* ====== Define JS Constants ====== */
@@ -10,28 +10,28 @@ const sidebarLinks = document.querySelectorAll('#docs-sidebar .scrollto');
 
 /* ===== Responsive Sidebar ====== */
 
-window.onload=function() 
-{ 
-    responsiveSidebar(); 
+window.onload=function()
+{
+    responsiveSidebar();
 };
 
-window.onresize=function() 
-{ 
-    responsiveSidebar(); 
+window.onresize=function()
+{
+    responsiveSidebar();
 };
 
 
 function responsiveSidebar() {
     let w = window.innerWidth;
 	if(w >= 1200) {
-	    // if larger 
+	    // if larger
 	    console.log('larger');
 		sidebar.classList.remove('sidebar-hidden');
 		sidebar.classList.add('sidebar-visible');
-		
+
 	} else {
 	    // if smaller
-	    console.log('smaller');
+	    // console.log('smaller');
 	    sidebar.classList.remove('sidebar-visible');
 		sidebar.classList.add('sidebar-hidden');
 	}
@@ -42,7 +42,7 @@ sidebarToggler.addEventListener('click', () => {
 		console.log('visible');
 		sidebar.classList.remove('sidebar-visible');
 		sidebar.classList.add('sidebar-hidden');
-		
+
 	} else {
 		console.log('hidden');
 		sidebar.classList.remove('sidebar-hidden');
@@ -56,27 +56,27 @@ sidebarToggler.addEventListener('click', () => {
 /* Ref: https://github.com/iamdustan/smoothscroll */
 
 // sidebarLinks.forEach((sidebarLink) => {
-	
+
 // 	sidebarLink.addEventListener('click', (e) => {
-		
+
 // 		e.preventDefault();
-		
+
 // 		var target = sidebarLink.getAttribute("href").replace('#', '');
-		
+
 // 		console.log('test',target);
-		
+
 //         document.getElementById(target).scrollIntoView({ behavior: 'smooth' });
-        
-        
+
+
 //         //Collapse sidebar after clicking
 // 		if (sidebar.classList.contains('sidebar-visible') && window.innerWidth < 1200){
-			
+
 // 			sidebar.classList.remove('sidebar-visible');
 // 		    sidebar.classList.add('sidebar-hidden');
-// 		} 
-		
+// 		}
+
 //     });
-	
+
 // });
 
 
@@ -91,7 +91,7 @@ var spy = new Gumshoe('#docs-nav a', {
 /* ====== SimpleLightbox Plugin ======= */
 /*  Ref: https://github.com/andreknieriem/simplelightbox */
 
-var lightbox = new SimpleLightbox('.simplelightbox-gallery a', {/* options */});
+
 
 
 

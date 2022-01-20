@@ -20,7 +20,7 @@
         <div class="row justify-content-center">
         @foreach ($modules as $module )
             {{-- {{dd($modules->id)}} --}}
-        
+
             <div class="col-12 col-lg-4 py-3">
                 <div class="card shadow-sm">
                     <div class="card-body">
@@ -37,20 +37,20 @@
                     </div><!--//card-body-->
                 </div><!--//card-->
             </div><!--//col-->
-            
-        @endforeach    
+
+        @endforeach
         </div><!--//row-->
     </div>
 @endsection
 @section('script')
     <script src="{{asset('vendor/nhelper/assets/plugins/popper.min.js')}}"></script>
-    <script src="{{asset('vendor/nhelper/assets/plugins/bootstrap/js/bootstrap.min.js')}}"></script>
+    <script src="{{asset('vendor/nhelper/assets/plugins/bootstrap.min.js')}}"></script>
 
     <!-- Page Specific JS -->
     <script src="{{asset('vendor/nhelper/assets/plugins/smoothscroll.min.js')}}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
-    <script src="{{asset('vendor/nhelper/assets/js/highlight-custom.js')}}"></script>
-    <script src="{{asset('vendor/nhelper/assets/plugins/simplelightbox/simple-lightbox.min.js')}}"></script>
-    <script src="{{asset('vendor/nhelper/assets/plugins/gumshoe/gumshoe.polyfills.min.js')}}"></script>
+    {{-- <script src="{{asset('vendor/nhelper/assets/js/highlight-custom.js')}}"></script>
+    <script src="{{asset('vendor/nhelper/assets/plugins/simple-lightbox.min.js')}}"></script> --}}
+    <script src="{{asset('vendor/nhelper/assets/plugins/gumshoe.polyfills.min.js')}}"></script>
     {{-- <script src="{{asset('vendor/nhelper/assets/js/docs.js')}}"></script> --}}
 @endsection

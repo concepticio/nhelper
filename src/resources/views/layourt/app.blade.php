@@ -18,7 +18,7 @@
         <script defer src="{{asset('vendor/nhelper/assets/fontawesome/js/all.min.js')}}"></script>
 
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
-        <link rel="stylesheet" href="{{asset('vendor/nhelper/assets/plugins/simplelightbox/simple-lightbox.min.css')}}">
+        <link rel="stylesheet" href="{{asset('vendor/nhelper/assets/plugins/simple-lightbox.min.css')}}">
 
 
         <!-- Theme CSS -->
@@ -37,7 +37,11 @@
                             <span></span>
                         </button>
                         <div class="site-logo"><a class="navbar-brand" href="{{ route('nhelper.index') }}"><img class="logo-icon me-2" src="{{ asset(config('nhelper.logo_path')) }}" width=50 height=45 ="logo"></a></div>
+
                     </div><!--//docs-logo-wrapper-->
+                    <div class="docs-top-utilities d-flex justify-content-end align-items-center">
+                        <a href="http://test.nfacture.com/" class="btn btn-primary d-none d-lg-flex">NFacture</a>
+                    </div>
                 </div><!--//container-->
             </div><!--//branding-->
         </header><!--//header-->
@@ -60,14 +64,14 @@
 
 
         <script src="{{asset('vendor/nhelper/assets/plugins/popper.min.js')}}"></script>
-        <script src="{{asset('vendor/nhelper/assets/plugins/bootstrap/js/bootstrap.min.js')}}"></script>
+        <script src="{{asset('vendor/nhelper/assets/plugins/bootstrap.min.js')}}"></script>
 
          <!-- Page Specific JS -->
         <script src="{{asset('vendor/nhelper/assets/plugins/smoothscroll.min.js')}}"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
         <script src="{{asset('vendor/nhelper/assets/js/highlight-custom.js')}}"></script>
-        <script src="{{asset('vendor/nhelper/assets/plugins/simplelightbox/simple-lightbox.min.js')}}"></script>
-        <script src="{{asset('vendor/nhelper/assets/plugins/gumshoe/gumshoe.polyfills.min.js')}}"></script>
-        <script src="{{asset('vendor/nhelper/assets/js/docs.js')}}"></script>
+        {{-- <script src="{{asset('vendor/nhelper/assets/plugins/simple-lightbox.min.js')}}"></script> --}}
+        <script src="{{asset('vendor/nhelper/assets/plugins/gumshoe.polyfills.min.js')}}"></script>
+         <script src="{{asset('vendor/nhelper/assets/js/docs.js')}}"></script>@yield('script')
     </body>
 </html>
