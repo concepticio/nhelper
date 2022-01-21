@@ -11,6 +11,12 @@ use App\Http\Controllers\Controller;
 
 class usersViewController extends Controller
 {
+    public function Next($idmodul, $idpost)
+    {  $Posts = help_post::all();
+        foreach ($Posts as $post) {
+            # code...
+        }
+    }
 
     public function showone($id)
     {
@@ -20,6 +26,7 @@ class usersViewController extends Controller
                 ->where('etat','=',1)
                 ->select('help_posts.id','help_posts.titre','help_posts.description','help_modules.name','help_posts.updated_at')
                 ->first();
+
 
         $modules =help_module::all();
         $posts =help_post::all();

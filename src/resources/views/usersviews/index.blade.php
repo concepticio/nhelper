@@ -49,8 +49,7 @@
     <!-- Page Specific JS -->
     <script src="{{asset('vendor/nhelper/assets/plugins/smoothscroll.min.js')}}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
-    {{-- <script src="{{asset('vendor/nhelper/assets/js/highlight-custom.js')}}"></script>
-    <script src="{{asset('vendor/nhelper/assets/plugins/simple-lightbox.min.js')}}"></script> --}}
+    {{-- script src="{{asset('vendor/nhelper/assets/plugins/simple-lightbox.min.js')}}"></script> --}}
     <script src="{{asset('vendor/nhelper/assets/plugins/gumshoe.polyfills.min.js')}}"></script>
     {{-- <script src="{{asset('vendor/nhelper/assets/js/docs.js')}}"></script> --}}
 @endsection
