@@ -83,10 +83,7 @@
       $('#summernote').summernote()
 
       // CodeMirror
-      CodeMirror.fromTextArea(document.getElementById("codeMirrorDemo"), {
-        mode: "htmlmixed",
-        theme: "monokai"
-      });
+
     })
 </script>
 @foreach ($help_posts as $post)
@@ -97,10 +94,7 @@
           $('#summernote-'+{{ $post->id }}).summernote()
 
           // CodeMirror
-          CodeMirror.fromTextArea(document.getElementById("codeMirrorDemo"), {
-            mode: "htmlmixed",
-            theme: "monokai"
-          });
+
         })
     </script>
 
