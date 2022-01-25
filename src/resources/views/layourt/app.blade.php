@@ -61,7 +61,7 @@
             </div>
         </div>
     </div>
-
+        
 
         <script src="{{asset('vendor/nhelper/assets/plugins/popper.min.js')}}"></script>
         <script src="{{asset('vendor/nhelper/assets/plugins/bootstrap.min.js')}}"></script>

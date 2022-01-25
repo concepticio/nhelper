@@ -1,4 +1,4 @@
-@extends('nhelper::dashbord.admindash');
+@extends('nhelper::layourt.admindash')
 @section('contenaire')
 <section class="content-header">
     <div class="container-fluid">
@@ -22,7 +22,7 @@
         <div class="col-md-12">
           <div class="card">
             <div class="card-header">
-              <h3 class="card-title">Liste des Modules</h3>              
+              <h3 class="card-title">Liste des Modules</h3>
               @include('nhelper::Module._modal_ajout')
               <button type="button" class="btn btn-success fa-pull-right" data-toggle="modal" data-target="#myModal">Ajouter</button>
             </div>
@@ -42,7 +42,7 @@
                     <tr>
                       <td>{{++$key}} </td>
                       <td>{{$module->name}}</td>
-                      <td>{{$module->parent}}</td>                    
+                      <td>{{$module->parent}}</td>
                       <td style="text-align: center">
                           <a data-toggle="modal" data-toggle="tooltip"data-target="#modal_show-{{ $module->id }}" class="btn btn-info"><i class="fa fa-eye"></i></a>
                           <a data-toggle="modal" data-toggle="tooltip"data-target="#modal_update-{{ $module->id }}" class="btn btn-warning text-white"><i class="fa fa-pencil-alt"></i></a>
@@ -52,9 +52,9 @@
                       @include('nhelper::Module._modal_update')
                       @include('nhelper::Module._confirm')
                     </tr>
-                    
+
                   @endforeach
-                  
+
                 </tbody>
               </table>
             </div>

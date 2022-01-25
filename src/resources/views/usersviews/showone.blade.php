@@ -33,9 +33,9 @@
             </section><!--//section-->
             <div class="docs-top-utilities d-flex justify-content-end align-items-center">
 
-                    <a class="btn btn-primary " style="margin-right: 72%;" href="{{route('view.oneshow',$idprevious)}}">PREVIOUS</a>
+                    <a id="previous" class="btn btn-primary " onclick="module()" style="margin-right: 72%;" href="{{route('view.oneshow',$idprevious)}}">PREVIOUS</a>
 
-                    <a class="btn btn-primary d-none d-lg-flex" style="margin-right: 5%;" href="{{route('view.oneshow',$idnext)}}">NEXT</a>
+                    <a id="next" class="btn btn-primary d-none d-lg-flex" style="margin-right: 5%;" href="{{route('view.oneshow',$idnext)}}">NEXT</a>
 
             </div>
 
@@ -51,4 +51,12 @@
     {{-- <script src="{{asset('vendor/nhelper/assets/plugins/simple-lightbox.min.js')}}"></script> --}}
     <script src="{{asset('vendor/nhelper/assets/plugins/gumshoe.polyfills.min.js')}}"></script>
     {{-- <script src="{{asset('vendor/nhelper/assets/js/docs.js')}}"></script> --}}
+    <script>
+        // let modules = {{json_encode($modules)}};
+        // let posts =  {{ json_encode($posts)}};
+       // console.log(posts);
+         function module(){
+             alert("ok")
+         }
+    </script>
 @endsection

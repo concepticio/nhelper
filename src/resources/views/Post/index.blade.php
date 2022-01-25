@@ -1,4 +1,4 @@
-@extends('nhelper::dashbord.admindash');
+@extends('nhelper::layourt.admindash')
 @section('contenaire')
 <section class="content-header">
     <div class="container-fluid">
@@ -22,7 +22,7 @@
         <div class="col-md-12">
           <div class="card">
             <div class="card-header">
-              <h3 class="card-title">Liste des Posts</h3>              
+              <h3 class="card-title">Liste des Posts</h3>
               @include('nhelper::Post._modal_ajout')
               <button type="button" class="btn btn-success fa-pull-right" data-toggle="modal" data-target="#myModal">Ajouter</button>
             </div>
@@ -49,15 +49,15 @@
                           <a data-toggle="modal" data-toggle="tooltip"data-target="#modal_show-{{ $post->id }}" class="btn btn-info"><i class="fa fa-eye"></i></a>
                           <a data-toggle="modal" data-toggle="tooltip"data-target="#modal_update-{{ $post->id }}" class="btn btn-warning text-white"><i class="fa fa-pencil-alt"></i></a>
                           <a data-toggle="modal" data-toggle="tooltip"data-target="#modal_confirm{{ $post->id }}" class="btn btn-danger"><i class="fa fa-trash"></i></a>
-                         
+
                       </td>
                       @include('nhelper::Post._modal_show')
                    @include('nhelper::Post._modal_update')
-                   
+
                    @include('nhelper::Post._confirm')
 
                     </tr>
-                    
+
                   @endforeach
                 </tbody>
               </table>
@@ -93,7 +93,7 @@
     <script>
       $(function () {
           // Summernote
-          
+
           $('#summernote-'+{{ $post->id }}).summernote()
 
           // CodeMirror
@@ -103,6 +103,6 @@
           });
         })
     </script>
-  
+
 @endforeach
 @endsection

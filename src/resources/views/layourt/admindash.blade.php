@@ -21,7 +21,6 @@
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
-
   <!-- Preloader -->
   <div class="preloader flex-column justify-content-center align-items-center">
     <img class="animation__shake" src="{{ asset(config('nhelper.logo_path'))}}" ALT="{{env('APP_NAME')}}" height="80" width="100">
