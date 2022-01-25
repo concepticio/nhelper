@@ -56,7 +56,7 @@
         // let posts =  {{ json_encode($posts)}};
        // console.log(posts);
          function module(){
-             alert("ok")
+             //alert("ok")
          }
     </script>
 @endsection
