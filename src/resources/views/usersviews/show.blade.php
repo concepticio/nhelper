@@ -57,5 +57,6 @@
     <script src="{{asset('vendor/nhelper/assets/js/highlight-custom.js')}}"></script>
     {{-- <script src="{{asset('vendor/nhelper/assets/plugins/simple-lightbox.min.js')}}"></script> --}}
     <script src="{{asset('vendor/nhelper/assets/plugins/gumshoe.polyfills.min.js')}}"></script>
-    {{-- <script src="{{asset('vendor/nhelper/assets/js/docs.js')}}"></script> --}}
+    
+    <script src="{{asset('vendor/nhelper/assets/js/docs.js')}}">
 @endsection

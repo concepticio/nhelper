@@ -82,8 +82,24 @@ class usersViewController extends Controller
     }
     public function index()
     {
+            $PostSearch= DB::table('help_posts')
+                        ->select('help_posts.titre')
+                        ->get();
+            
+
+            // dd($PostSearch);
             $modules = help_module::all();
-            return view('nhelper::usersviews.index')->with(['modules'=>$modules]);
+            return view('nhelper::usersviews.index')->with(['modules'=>$modules,'PostSearch'=>$PostSearch]);
+    }
+
+    public function search(Request $request)
+    {
+          $search = $request->get('term');
+
+          $result = help_post::where('name', 'LIKE', '%'. $search. '%')->get();
+
+          return response()->json($result);
+
     }
 
     public function show($id)

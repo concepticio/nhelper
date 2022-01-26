@@ -13,7 +13,9 @@
 
         <!-- Google Font -->
         <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
-
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" />
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.1/bootstrap3-typeahead.min.js"></script>
         <!-- FontAwesome JS-->
         <script defer src="{{asset('vendor/nhelper/assets/fontawesome/js/all.min.js')}}"></script>
 
@@ -61,7 +63,7 @@
             </div>
         </div>
     </div>
-        
+
 
         <script src="{{asset('vendor/nhelper/assets/plugins/popper.min.js')}}"></script>
         <script src="{{asset('vendor/nhelper/assets/plugins/bootstrap.min.js')}}"></script>
@@ -72,6 +74,6 @@
         <script src="{{asset('vendor/nhelper/assets/js/highlight-custom.js')}}"></script>
         {{-- <script src="{{asset('vendor/nhelper/assets/plugins/simple-lightbox.min.js')}}"></script> --}}
         <script src="{{asset('vendor/nhelper/assets/plugins/gumshoe.polyfills.min.js')}}"></script>
-         <script src="{{asset('vendor/nhelper/assets/js/docs.js')}}"></script>@yield('script')
+         </script>@yield('script')
     </body>
 </html>
