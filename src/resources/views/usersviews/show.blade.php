@@ -1,6 +1,7 @@
 @extends('nhelper::layourt.app')
 @section('sider')
   <div class="docs-wrapper">
+      fngkfngfkfddf
             <div id="docs-sidebar" class="docs-sidebar"style="background-color:#0f3f5d">
                     <nav id="docs-nav" class="docs-nav navbar" >
                         @foreach ($modules as $mod )
@@ -57,6 +58,6 @@
     <script src="{{asset('vendor/nhelper/assets/js/highlight-custom.js')}}"></script>
     {{-- <script src="{{asset('vendor/nhelper/assets/plugins/simple-lightbox.min.js')}}"></script> --}}
     <script src="{{asset('vendor/nhelper/assets/plugins/gumshoe.polyfills.min.js')}}"></script>
-    
+
     <script src="{{asset('vendor/nhelper/assets/js/docs.js')}}">
 @endsection

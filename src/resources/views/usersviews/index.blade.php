@@ -7,7 +7,9 @@
             <h1 class="page-heading single-col-max mx-auto">Documentation</h1>
             <div class="page-intro single-col-max mx-auto">Sur cette page, vous trouverez tout ce que vous avez besoin de savoir sur {{env('APP_NAME')}}</div>
             <div class="main-search-box pt-3 d-block mx-auto">
-                <form class="search-form w-100">
+                <form class="search-form w-100" action="{{ route('search') }}">
+                    @csrf
+                    @method('POST')
                     <input type="text"  id="searchInput" placeholder="Search the docs..." name="searchInput" class="form-control search-input">
                     <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
                 </form>
@@ -80,7 +82,7 @@
 
 
         result.forEach(resultItem => {
-            suggestion+= '<div class=\"suggestion\">'+ resultItem.titre+'</div>'
+            suggestion+= '<div class=\"suggestion\"">'+ resultItem.titre+'</div>'
 
         }
         );}

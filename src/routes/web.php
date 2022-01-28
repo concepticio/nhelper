@@ -22,7 +22,7 @@ Route::group(['prefix' => 'nhelper'], function () {
     Route::get('/show/{idpost}', [usersViewController::class,'show'])->name('view.show');
     Route::get('/oneshow{id}', [usersViewController::class,'showone'])->name('view.oneshow');
     // Route::get('/aide/{module}/{post}', [usersViewController::class,'navAide'])->name('view.navaide');
-    Route::get('autocomplete', [usersViewController::class, 'search']);
+    Route::get('search', [usersViewController::class, 'search'])->name('search');
     Route::get('/admin', function () {
         return view('nhelper::layourt.admindash');
     });

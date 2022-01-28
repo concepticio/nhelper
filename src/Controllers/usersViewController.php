@@ -83,9 +83,9 @@ class usersViewController extends Controller
     public function index()
     {
             $PostSearch= DB::table('help_posts')
-                        ->select('help_posts.titre')
+                        ->select('help_posts.id','help_posts.titre')
                         ->get();
-            
+
 
             // dd($PostSearch);
             $modules = help_module::all();
@@ -94,11 +94,24 @@ class usersViewController extends Controller
 
     public function search(Request $request)
     {
-          $search = $request->get('term');
+        try {
+            $search = $request->searchInput;
 
-          $result = help_post::where('name', 'LIKE', '%'. $search. '%')->get();
+            $results = DB::table('help_posts')
+                      ->join('help_modules','help_posts.help_module_id','=','help_modules.id')
+                      ->where('help_modules.name','LIKE',$search.'%')
+                      ->orWhere('help_posts.titre','LIKE',$search.'%')
+                      ->orWhere('help_posts.description','LIKE',$search.'%')
+                      ->select('help_modules.id as modul','help_modules.name','help_posts.titre','help_posts.id','help_posts.help_module_id',)
+                    //   ->groupBy('help_posts.titre')
+                      ->get();
+            //   dd($results);
+            return view('nhelper::usersviews.info')->with(['results'=>$results]);
 
-          return response()->json($result);
+        } catch (\Throwable $th) {
+            return back()->withError($th->getMessage());
+        }
+
 
     }
 
