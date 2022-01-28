@@ -49,6 +49,7 @@
         </header><!--//header-->
         <div class="docs-wrapper">
             @yield('sider')
+            
             <div class="page-content">
                 <div class="container">
                     @yield('contentindex')

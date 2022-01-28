@@ -37,12 +37,13 @@ a:link:active, a:visited:active {
     <!--{{$temp = 0}}-->
     @foreach ( $results as $result )
 
+
     @if ($temp != $result->modul)
-        <h3><a href="{{ route('view.show',[$result->help_module_id]) }}">{{$result->name}}</a></h3>
+        <h4><a href="{{ route('view.show',[$result->help_module_id]) }}">{{str_replace($search, '<strong style: color:red;>'.$search.'</strong>' ,$result->name)}}</a></h4>
     @endif
     <!--{{$temp = $result->modul}}-->
 
-        <h6><a style="color: black" href="{{ route('view.oneshow',[$result->id]) }}">{{$result->titre}}</a></h6>
+        <a style="color: black" href="{{ route('view.oneshow',[$result->id]) }}">{{$result->titre}}</a><br>
     @endforeach
 </div>
 

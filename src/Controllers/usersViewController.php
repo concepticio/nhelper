@@ -95,18 +95,21 @@ class usersViewController extends Controller
     public function search(Request $request)
     {
         try {
-            $search = $request->searchInput;
 
+            $search = $request->searchInput;
+            if ($search == null) {
+               return redirect()->route('nhelper.index');
+            }
             $results = DB::table('help_posts')
                       ->join('help_modules','help_posts.help_module_id','=','help_modules.id')
                       ->where('help_modules.name','LIKE',$search.'%')
                       ->orWhere('help_posts.titre','LIKE',$search.'%')
                       ->orWhere('help_posts.description','LIKE',$search.'%')
                       ->select('help_modules.id as modul','help_modules.name','help_posts.titre','help_posts.id','help_posts.help_module_id',)
-                    //   ->groupBy('help_posts.titre')
+                      //   ->groupBy('help_posts.titre')
                       ->get();
-            //   dd($results);
-            return view('nhelper::usersviews.info')->with(['results'=>$results]);
+                      //   dd($results);
+            return view('nhelper::usersviews.info')->with(['results'=>$results,'search'=>$search]);
 
         } catch (\Throwable $th) {
             return back()->withError($th->getMessage());
