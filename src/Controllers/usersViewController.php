@@ -126,6 +126,7 @@ class usersViewController extends Controller
         try {
 
             $search = $request->searchInput;
+            $retour = $request->searchInput;
             if ($search == null) {
                return redirect()->route('nhelper.index');
             }
@@ -153,16 +154,23 @@ class usersViewController extends Controller
                       ->select('help_modules.id as modul','help_modules.name','help_posts.titre','help_posts.description','help_posts.id','help_posts.help_module_id',)
                       ->get();
                       //$test = $results
+            foreach ($results as $key => $result) {
+                $results[$key]->description = strip_tags(strtolower($results[$key]->description));
+            }
             foreach ($searchExp as $explo)
              {
                foreach ($results as $key => $result)
                {
-                $results[$key]->titre = str_replace(strtolower($explo),'<strong style = "color:rgba(99, 99, 247, 0.911) ">'.$explo.'</strong>',strtolower($results[$key]->titre));
-                $results[$key]->description = str_replace(strtolower($explo),'<strong style = "color:rgba(99, 99, 247, 0.911)">'.$explo.'</strong>',strip_tags(strtolower($results[$key]->description)));
 
+
+                $test2 = substr(strstr($results[$key]->description,$explo,true),0,120)." ... ".strstr($results[$key]->description,$explo)." ...";
+                $results[$key]->titre = str_replace(strtolower($explo),'<strong>'.$explo.'</strong>',strtolower($results[$key]->titre));
+                $results[$key]->description = str_replace(strtolower($explo),'<strong>'.$explo.'</strong>',$results[$key]->description);
+                // dd($results[$key]->description);
                }
              }
-            return view('nhelper::usersviews.info')->with(['results'=>$results,'search'=>$search]);
+            // dd($search);
+            return view('nhelper::usersviews.info')->with(['results'=>$results,'search'=>$retour]);
 
         } catch (\Throwable $th) {
             return back()->withError($th->getMessage());

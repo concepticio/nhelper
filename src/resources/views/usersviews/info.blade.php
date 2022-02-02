@@ -31,16 +31,16 @@ a:link:active, a:visited:active {
     </div>
 @endsection
 @section('content')
-<div style="margin-top: 3%">
+<div style="margin-top: 3%; margin-left:-15%; padding-right:13%; text-align:justify; ">
     <!--{{$temp = 0}}-->
     @foreach ( $results as $result )
 
-    @if ($temp != $result->modul)
-        {{-- <h5><a href="{{ route('view.show',[$result->help_module_id]) }}">{{str_replace($search, '<strong style: color:red;>'.$search.'</strong>' ,$result->name)}}</a></h4> --}}
+    @if ($result->description != NULL)
+    <br><br><a style="color: rgba(99, 99, 247, 0.911); text-transform: uppercase; font-size:25px;" href="{{ route('view.oneshow',[$result->id]) }}">{!!$result->titre!!}</a><br>
+            {!!substr($result->description,0,500)!!}<span> ... </span>
     @endif
     <!--{{$temp = $result->modul}}-->
-    <br><a style="color: black; text-transform: uppercase; font-size:35px;" href="{{ route('view.oneshow',[$result->id]) }}">{!!$result->titre!!}</a><br>
-        <br>{!! substr($result->description, 0,1000) !!}
+
     @endforeach
 </div>
 
