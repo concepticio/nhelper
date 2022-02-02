@@ -21,7 +21,7 @@ Route::group(['prefix' => 'nhelper'], function () {
     Route::get('/', [usersViewController::class,'index'])->name('nhelper.index');
     Route::get('/show/{idpost}', [usersViewController::class,'show'])->name('view.show');
     Route::get('/oneshow{id}', [usersViewController::class,'showone'])->name('view.oneshow');
-    // Route::get('/aide/{module}/{post}', [usersViewController::class,'navAide'])->name('view.navaide');
+    Route::get('/aide/{module}/{post}', [usersViewController::class,'Next'])->name('view.next');
     Route::get('search', [usersViewController::class, 'search'])->name('search');
     Route::get('/admin', function () {
         return view('nhelper::layourt.admindash');

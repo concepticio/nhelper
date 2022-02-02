@@ -17,7 +17,7 @@ class NhelperServiceProvider extends ServiceProvider
         $this->app->make('Concepticio\Nhelper\Controllers\help_moduleController');
         $this->loadViewsFrom(__DIR__.'/resources/views', 'nhelper');
         $this->mergeConfigFrom(__DIR__.'/config.php', 'nhelper');
-        
+
     }
 
     /**
@@ -30,7 +30,7 @@ class NhelperServiceProvider extends ServiceProvider
         // les routes web
         include __DIR__.'/routes/web.php';
 
-   
+
         $this->loadMigrationsFrom(__DIR__.'/database/migrations');
         $this->loadTranslationsFrom(__DIR__.'/resources/lang', 'nhelper');
         $this->loadViewsFrom(__DIR__.'/resources/views', 'nhelper');

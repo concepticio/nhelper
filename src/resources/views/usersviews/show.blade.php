@@ -38,7 +38,7 @@
     <div>
         <a class="btn btn-primary " style="margin-right: 72%;" href="{{route('view.oneshow',$idprevious)}}">PREVIOUS</a>
         <div class="docs-top-utilities d-flex justify-content-end align-items-center">
-            <a class="btn btn-primary d-none d-lg-flex" style="margin-right: 5%;" href="{{route('view.oneshow',$idnext)}}">NEXT</a>
+            <a class="btn btn-primary d-none d-lg-flex" style="margin-right: 5%;" href="{{route('view.next',[$idnext,2])}}">NEXT</a>
         </div>
     </div>
 
@@ -54,5 +54,5 @@
     {{-- <script src="{{asset('vendor/nhelper/assets/plugins/simple-lightbox.min.js')}}"></script> --}}
     <script src="{{asset('vendor/nhelper/assets/plugins/gumshoe.polyfills.min.js')}}"></script>
 
-    <script src="{{asset('vendor/nhelper/assets/js/docs.js')}}">
+    <script src="{{asset('vendor/nhelper/assets/js/docs.js')}}"></script>
 @endsection

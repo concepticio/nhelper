@@ -22,9 +22,7 @@ a:link:active, a:visited:active {
             <div class="page-intro single-col-max mx-auto">Sur cette page, vous trouverez tout ce que vous avez besoin de savoir sur {{env('APP_NAME')}}</div>
             <div class="main-search-box pt-3 d-block mx-auto">
                 <form class="search-form w-100" action="{{ route('search') }}">
-                    @csrf
-                    @method('POST')
-                    <input type="text"  id="searchInput" placeholder="Search the docs..." name="searchInput" class="form-control search-input">
+                    <input type="text"  id="searchInput" name="searchInput" value="{{$search}}" class="form-control search-input">
                     <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
                 </form>
                 <div id="suggestion"></div>
@@ -37,13 +35,12 @@ a:link:active, a:visited:active {
     <!--{{$temp = 0}}-->
     @foreach ( $results as $result )
 
-
     @if ($temp != $result->modul)
-        <h4><a href="{{ route('view.show',[$result->help_module_id]) }}">{{str_replace($search, '<strong style: color:red;>'.$search.'</strong>' ,$result->name)}}</a></h4>
+        {{-- <h5><a href="{{ route('view.show',[$result->help_module_id]) }}">{{str_replace($search, '<strong style: color:red;>'.$search.'</strong>' ,$result->name)}}</a></h4> --}}
     @endif
     <!--{{$temp = $result->modul}}-->
-
-        <a style="color: black" href="{{ route('view.oneshow',[$result->id]) }}">{{$result->titre}}</a><br>
+    <br><a style="color: black; text-transform: uppercase; font-size:35px;" href="{{ route('view.oneshow',[$result->id]) }}">{!!$result->titre!!}</a><br>
+        <br>{!! substr($result->description, 0,1000) !!}
     @endforeach
 </div>
 
