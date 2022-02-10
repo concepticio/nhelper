@@ -35,7 +35,7 @@ a:link:active, a:visited:active {
     <!--{{$temp = 0}}-->
     @foreach ( $results as $result )
 
-    @if ($result->description != NULL)
+    @if ($result->description != "")
     <br><br><a style="color: rgba(99, 99, 247, 0.911); text-transform: uppercase; font-size:25px;" href="{{ route('view.oneshow',[$result->id]) }}">{!!$result->titre!!}</a><br>
             {!!substr($result->description,0,500)!!}<span> ... </span>
     @endif

@@ -11,12 +11,34 @@ use GrahamCampbell\ResultType\Result;
 
 class usersViewController extends Controller
 {
-    public function Next($idmodul, $idpost)
-    {  $post = DB::table('help_posts')
-                ->where('help_post.id','=',$idpost)
-                ->where('help_post.help_module_id','=',$idmodul)
+    public function next($idmodul, $idpost)
+    {
+        $idmodul=intval($idmodul);
+        $posts = DB::table('help_posts')
+                ->where('help_posts.help_module_id','=',$idmodul)
+                ->select('help_posts.id','help_posts.help_module_id')
                 ->get();
-                dd($post);
+
+                $verif = 0;
+                foreach ($posts as $key => $post)
+                { dd($posts);
+                    if ($post->id == $idpost)
+                    {
+                        $verif = 1;
+                    }
+                    if ($verif == 1)
+                    {
+                       if ($posts[count($posts)-1]->id == $post->id)
+                       {
+
+                       }
+                       $indice =$key +1;
+                       //dd($indice);
+                       return redirect()->route('view.oneshow',[$posts[$indice]->id]);
+                       break;
+                    }
+                }
+
     }
 
 
@@ -26,7 +48,7 @@ class usersViewController extends Controller
                 ->join('help_modules','help_posts.help_module_id','=','help_modules.id')
                 ->where('help_posts.id','=',$id)
                 ->where('etat','=',1)
-                ->select('help_posts.id','help_posts.titre','help_posts.description','help_modules.name','help_posts.updated_at')
+                ->select('help_posts.id','help_posts.titre','help_posts.help_module_id','help_posts.description','help_modules.name','help_posts.updated_at')
                 ->first();
 
 
@@ -82,6 +104,8 @@ class usersViewController extends Controller
 
 
     }
+
+
     public function index()
     {
             $PostSearch= DB::table('help_posts')
@@ -93,6 +117,8 @@ class usersViewController extends Controller
             $modules = help_module::all();
             return view('nhelper::usersviews.index')->with(['modules'=>$modules,'PostSearch'=>$PostSearch]);
     }
+
+
     protected function elimine( $searchs)
     {
         $elimines=["un","une","le","la","les","des","de","du",
@@ -109,17 +135,7 @@ class usersViewController extends Controller
                    }
                 }
     }
-    private function gras($expr=null,$search){
-        if(!$expr) return "";
-        if(is_array($expr)){
-            foreach($expr as $k=> $ex){
-                $expr[$k] = '<br style=" color:rgba(99, 99, 247, 0.911)">'.$ex.'</br>';
-            }
-        }else{
-            $expr = '<br style=" color:rgba(99, 99, 247, 0.911)">'.$expr.'</br>';
-        }
-        return $expr;
-    }
+
 
     public function search(Request $request)
     {
@@ -145,8 +161,10 @@ class usersViewController extends Controller
                 }
 
 
-            $results = DB::table('help_posts')
+
+                $results = DB::table('help_posts')
                       ->join('help_modules','help_posts.help_module_id','=','help_modules.id')
+                      ->Where('help_posts.etat','=',1)
                       ->where('help_modules.name','LIKE','%'.$search.'%')
                       ->orWhere('help_posts.titre','LIKE','%'.$search.'%')
                       ->orWhere('help_posts.description','LIKE','%'.$search.'%')
@@ -158,17 +176,15 @@ class usersViewController extends Controller
                 $results[$key]->description = strip_tags(strtolower($results[$key]->description));
             }
             foreach ($searchExp as $explo)
-             {
+            {
                foreach ($results as $key => $result)
                {
-
-
-                $test2 = substr(strstr($results[$key]->description,$explo,true),0,120)." ... ".strstr($results[$key]->description,$explo)." ...";
+                // $test2 = substr(strstr($results[$key]->description,$explo,true),0,120)." ... ".strstr($results[$key]->description,$explo)." ...";
                 $results[$key]->titre = str_replace(strtolower($explo),'<strong>'.$explo.'</strong>',strtolower($results[$key]->titre));
                 $results[$key]->description = str_replace(strtolower($explo),'<strong>'.$explo.'</strong>',$results[$key]->description);
                 // dd($results[$key]->description);
                }
-             }
+            }
             // dd($search);
             return view('nhelper::usersviews.info')->with(['results'=>$results,'search'=>$retour]);
 

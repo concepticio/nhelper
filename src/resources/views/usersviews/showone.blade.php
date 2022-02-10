@@ -26,6 +26,7 @@
                 <span class="docs-time">Dernière Mise à jour: {{$lists->updated_at}}</span>
 
             </header>
+            
 
             <section class="docs-section" id="item-2-1">
                 <h2 class="section-heading">{{$lists->titre}}</h2>
@@ -35,7 +36,7 @@
 
                     <a id="previous" class="btn btn-primary " onclick="module()" style="margin-right: 72%;" href="{{route('view.oneshow',$idprevious)}}">PREVIOUS</a>
 
-                    <a id="next" class="btn btn-primary d-none d-lg-flex" style="margin-right: 5%;" href="{{route('view.oneshow',$idnext)}}">NEXT</a>
+                    <a id="next" class="btn btn-primary d-none d-lg-flex" style="margin-right: 5%;" href="{{route('view.next',[$lists->help_module_id,$lists->id])}}">NEXT</a>
 
             </div>
 
