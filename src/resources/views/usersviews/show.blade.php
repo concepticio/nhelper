@@ -35,12 +35,12 @@
             </section><!--//section-->
 
     </article>
-    <div>
+    {{-- <div>
         <a class="btn btn-primary " style="margin-right: 72%;" href="{{route('view.oneshow',$idprevious)}}">PREVIOUS</a>
         <div class="docs-top-utilities d-flex justify-content-end align-items-center">
             <a class="btn btn-primary d-none d-lg-flex" style="margin-right: 5%;" href="{{route('view.next',[$idnext,2])}}">NEXT</a>
         </div>
-    </div>
+    </div> --}}
 
 
 @endsection

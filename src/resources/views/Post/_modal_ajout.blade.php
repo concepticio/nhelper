@@ -16,10 +16,10 @@
                     <label for="titre">Titre<span class="text-danger">*</span></label>
                     <input type="text" class="form-control" style="text-transform: uppercase" name="titre" id="titre" placeholder="Titre du post" required>
                 </div>
-              
+
                 <div class="form-group">
                     <label>Module<span class="text-danger">*</span></label>
-                    <select  name="help_module_id" class="form-control" required>                        
+                    <select  name="help_module_id" class="form-control" required>
                         @foreach ($help_modules as $module )
                             <option value="{{$module->id}} ">{{$module->name}}</option>
                         @endforeach
@@ -28,7 +28,7 @@
 
                 <div class="form-group">
                     <label for="description">Description</label>
-                    <textarea name="description" id="summernote"  required>
+                    <textarea name="description" id=""  class="form-control" style="height: 500px;" required>
 
                     </textarea>
                 </div>

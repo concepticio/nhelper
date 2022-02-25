@@ -20,25 +20,14 @@ class usersViewController extends Controller
                 ->get();
 
                 $verif = 0;
+                $nombre = count($posts);
                 foreach ($posts as $key => $post)
-                { dd($posts);
-                    if ($post->id == $idpost)
-                    {
-                        $verif = 1;
-                    }
-                    if ($verif == 1)
-                    {
-                       if ($posts[count($posts)-1]->id == $post->id)
-                       {
-
-                       }
-                       $indice =$key +1;
-                       //dd($indice);
-                       return redirect()->route('view.oneshow',[$posts[$indice]->id]);
-                       break;
+                { $verif +=1;
+                    dd($post->id);
+                    if ($post->id != $idpost) {
+                    //    return redirect()->route('view.oneshow',[$post->id]);
                     }
                 }
-
     }
 
 
@@ -61,6 +50,7 @@ class usersViewController extends Controller
         $last=(DB::table('help_posts')->latest('id')->first());
         if ($id <=  $last->id) {
             $idnext= $id+1;
+            $test ="" ;
             do {
                   $test =help_post::find($idnext);
                   if(($test == null)&&($idnext<$last->id)){
@@ -230,9 +220,6 @@ class usersViewController extends Controller
                 'limit'=>$last_post->id
             ]);
     }
-
-
-
                     //$result = array();
                     // if ($results->items == NULL)
                     // {
