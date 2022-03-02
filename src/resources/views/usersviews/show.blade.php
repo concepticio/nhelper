@@ -33,7 +33,7 @@
                 <p>{!!$lists->description!!}</p>
 
             </section><!--//section-->
-
+ 
     </article>
     {{-- <div>
         <a class="btn btn-primary " style="margin-right: 72%;" href="{{route('view.oneshow',$idprevious)}}">PREVIOUS</a>

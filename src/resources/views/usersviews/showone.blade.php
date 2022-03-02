@@ -1,4 +1,9 @@
 @extends('nhelper::layourt.app')
+<style>
+    svg{
+        height: 5px !important;
+    }
+</style>
 @section('sider')
   <div class="docs-wrapper">
             <div id="docs-sidebar" class="docs-sidebar"style="background-color:#0f3f5d">
@@ -18,12 +23,13 @@
 @endsection
 @section('content')
     <article class="docs-article" id="section-1">
+        @foreach ($lists as $list )
 
 
             <header class="docs-header">
 
-                <h1 class="docs-heading">{{$lists->name}} </h1>
-                <span class="docs-time">Dernière Mise à jour: {{$lists->updated_at}}</span>
+                <h1 class="docs-heading">{{$list->name}} </h1>
+                <span class="docs-time">Dernière Mise à jour: {{$list->updated_at}}</span>
 
             </header>
 
@@ -33,16 +39,17 @@
             @endif
 
             <section class="docs-section" id="item-2-1">
-                <h2 class="section-heading">{{$lists->titre}}</h2>
-                <p>{!!$lists->description!!}</p>
+                <h2 class="section-heading">{{$list->titre}}</h2>
+                <p>{!!$list->description!!}</p>
             </section><!--//section-->
-            {{-- <div class="docs-top-utilities d-flex justify-content-end align-items-center">
+        @endforeach
 
-                    <a id="previous" class="btn btn-primary " onclick="module()" style="margin-right: 72%;" href="{{route('view.oneshow',$idprevious)}}">PREVIOUS</a>
 
-                    <a id="next" class="btn btn-primary d-none d-lg-flex" style="margin-right: 5%;" href="{{route('view.next',[$lists->help_module_id,$lists->id])}}">NEXT</a>
+            <div class="docs-top-utilities d-flex justify-content-end align-items-center" st>
 
-            </div> --}}
+                {!! $lists->links() !!}
+
+            </div>
 
     </article>
 @endsection

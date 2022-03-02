@@ -35,10 +35,10 @@ class usersViewController extends Controller
     {
         $lists=DB::table('help_posts')
                 ->join('help_modules','help_posts.help_module_id','=','help_modules.id')
-                ->where('help_posts.id','=',$id)
+                // ->where('help_posts.id','=',$id)
                 ->where('etat','=',1)
                 ->select('help_posts.id','help_posts.titre','help_posts.help_module_id','help_posts.description','help_modules.name','help_posts.updated_at')
-                ->first();
+                ->paginate(01);
 
 
         $modules =help_module::all();
