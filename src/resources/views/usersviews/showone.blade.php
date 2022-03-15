@@ -1,9 +1,4 @@
 @extends('nhelper::layourt.app')
-<style>
-    svg{
-        height: 5px !important;
-    }
-</style>
 @section('sider')
   <div class="docs-wrapper">
             <div id="docs-sidebar" class="docs-sidebar"style="background-color:#0f3f5d">
@@ -22,32 +17,20 @@
             </div>
 @endsection
 @section('content')
-    <article class="docs-article" id="section-1">
+    <article class="docs-article" id="section-1" style="text-align: justify; font-size:1em">
         @foreach ($lists as $list )
 
-
-            <header class="docs-header">
-
-                <h1 class="docs-heading">{{$list->name}} </h1>
-                <span class="docs-time">Dernière Mise à jour: {{$list->updated_at}}</span>
-
-            </header>
-
-            @if (isset($mods))
-
-
-            @endif
-
             <section class="docs-section" id="item-2-1">
-                <h2 class="section-heading">{{$list->titre}}</h2>
+                <h2 class="section-heading">{{$list->name}}</h2>
                 <p>{!!$list->description!!}</p>
+                <span class="docs-time">Dernière Mise à jour: {{$list->updated_at}}</span>
             </section><!--//section-->
         @endforeach
 
 
             <div class="docs-top-utilities d-flex justify-content-end align-items-center" st>
 
-                {!! $lists->links() !!}
+                {!! $lists->links('nhelper::usersviews.paginationlinks') !!}
 
             </div>
 

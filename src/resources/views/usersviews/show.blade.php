@@ -18,29 +18,31 @@
 @endsection
 
 @section('content')
-    <article class="docs-article" id="section-1">
+ @foreach ($listes as $liste )
+    <article class="docs-article" id="section-1" style="text-align: justify; font-size:1em">
         <header class="docs-header">
-            <h1 class="docs-heading">{{$lists->name}}</h1>
+            {{-- //<h1 class="docs-heading">{{$liste->name}}</h1> --}}
             <section class="docs-intro">
-                <p>{{$lists->breve_description}}</p>
-                <span class="docs-time">Dernière Mise à jour: {{$lists->updated_at}}</span>
+
+                <span class="docs-time">Dernière Mise à jour: {{$liste->updated_at}}</span>
             </section>
         </header>
 
 
             <section class="docs-section" id="item-2-1">
-                <h2 class="section-heading">{{$lists->titre}}</h2>
-                <p>{!!$lists->description!!}</p>
+                <h2 class="section-heading"> {{$liste->name}}</h2>
+                <p>{!!$liste->description!!}</p>
 
             </section><!--//section-->
- 
+
     </article>
-    {{-- <div>
-        <a class="btn btn-primary " style="margin-right: 72%;" href="{{route('view.oneshow',$idprevious)}}">PREVIOUS</a>
-        <div class="docs-top-utilities d-flex justify-content-end align-items-center">
-            <a class="btn btn-primary d-none d-lg-flex" style="margin-right: 5%;" href="{{route('view.next',[$idnext,2])}}">NEXT</a>
-        </div>
-    </div> --}}
+ @endforeach
+
+ <div class="docs-top-utilities d-flex justify-content-end align-items-center" st>
+
+    {!! $listes->links('nhelper::usersviews.paginationlinks') !!}
+
+</div>
 
 
 @endsection

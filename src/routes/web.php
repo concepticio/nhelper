@@ -26,6 +26,9 @@ Route::group(['prefix' => 'nhelper'], function () {
     Route::get('/admin', function () {
         return view('nhelper::layourt.admindash');
     });
+     Route::get('/test', function () {
+        return view('nhelper::all');
+    });
 
     //hel_post
     Route::resource('posts', help_postController::class);

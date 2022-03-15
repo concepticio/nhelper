@@ -11,18 +11,18 @@
         <!-- Modal body -->
         <div class="modal-body">
             <form action="{{ route('posts.update',$post->id) }} " method="POST">
-                
+
                 @csrf
                 @method('PUT')
                 <div class="form-group">
                     <label for="titre">Titre<span class="text-danger">*</span></label>
                     <input type="text" class="form-control" style="text-transform: uppercase" value=" {{$post->titre}} " name="titre" placeholder="Titre du post" required>
                 </div>
-               
+
                 <div class="form-group">
                     <label>Module<span class="text-danger">*</span></label>
-                    <select  name="help_module_id" class="form-control" required>  
-                      <option value="{{$post->help_module_id}} ">Selectonnez un module</option>                      
+                    <select  name="help_module_id" class="form-control" required>
+                      <option value="{{$post->help_module_id}} ">Selectonnez un module</option>
                         @foreach ($help_modules as $key=>$module )
                             <option value="{{$module->id}} @if($post->help_module_id==$key) selected @endif ">{{$module->name}}</option>
                         @endforeach
@@ -31,7 +31,7 @@
 
                 <div class="form-group">
                     <label for="description">Description</label>
-                    <textarea name="description"  id="summernote-{{ $post->id }}"  required>
+                    <textarea name="description"  id="{{ $post->id }}" class="form-control" style="height: 500px;"  required>
                             {{$post->description}}
                     </textarea>
                 </div>
