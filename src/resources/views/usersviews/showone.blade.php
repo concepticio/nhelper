@@ -20,7 +20,7 @@
     <article class="docs-article" id="section-1" style="text-align: justify; font-size:1em">
         @foreach ($lists as $list )
 
-            <section class="docs-section" id="item-2-1">
+            <section class="docs-section justify-content-center" id="item-2-1">
                 <h2 class="section-heading">{{$list->name}}</h2>
                 <p>{!!$list->description!!}</p>
                 <span class="docs-time">Dernière Mise à jour: {{$list->updated_at}}</span>

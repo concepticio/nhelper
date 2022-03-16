@@ -29,7 +29,7 @@
         </header>
 
 
-            <section class="docs-section" id="item-2-1">
+            <section class="docs-section justify-content-center" id="item-2-1">
                 <h2 class="section-heading"> {{$liste->name}}</h2>
                 <p>{!!$liste->description!!}</p>
 
